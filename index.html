@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vsevn</title>
+    <!-- Основные SVG-файлы -->
+    <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" id="favicon-light">
+    <link rel="icon" href="/icons/dark-favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)"
+        id="favicon-dark-svg">
+
+    <!-- Тёмные PNG favicon для лучшей совместимости -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/dark-favicon-16x16.png"
+        media="(prefers-color-scheme: dark)" id="favicon-dark-16">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/dark-favicon-32x32.png"
+        media="(prefers-color-scheme: dark)" id="favicon-dark-32">
+    <link rel="icon" type="image/png" sizes="256x256" href="/img/favicon/dark-favicon-256x256.png"
+        media="(prefers-color-scheme: dark)" id="favicon-dark-256">
+
+    <!-- ICO (16×16, 32×32, 48×48, 64×64) -->
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+
+    <!-- PNG-файлы -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/img/favicon/favicon-128x128.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/img/favicon/favicon-256x256.png">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/img/favicon/apple-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+
+    <!-- Safari Pinned Tab -->
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#ffffff">
+
+    <!-- iOS Splash-screens -->
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-640x1136.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-750x1334.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-1125x2436.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)">
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-828x1792.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-1242x2688.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)">
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-1536x2048.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-1668x2224.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="/img/splash/splash-2048x2732.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)">
+
+    <!-- Android / PWA icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/favicon/web-app-manifest-512x512.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-square70x70logo" content="/img/windows/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/img/windows/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/img/windows/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/img/windows/mstile-310x310.png">
+
+    <!-- Яндекс-фолбэк -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+
+    <!-- Специально для Яндекса -->
+    <link rel="yandex-tableau-icon" href="/icons/favicon-120.svg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <p class="header__region-prefix">Ваш регион</p>
+        <div class="header__region">
+            <img src="img/region.svg" alt="Регион">
+            <p>Нижегородская область<span> ?</span></p>
+        </div>
+        <button class="header__region-confirmation">Да</button>
+        <div class="header__region-edition">
+            <button class="header__region-edition__btn">Изменить региона</button>
+            <div class="region-edition-popup-wrapper">
+                <div class="region-edition-popup">
+                    <h2 class="region-edition-popup__title">Выберите регион или город</h2>
+                    <div class="region-edition-popup__input-wrapper search-wrapper">
+                        <input class="region-edition-popup__input" type="search" placeholder="Начните вводить название региона, города">
+                        <img class="search-icon" src="img/search.svg" alt="Поиск">
+                        <img class="clear-icon" src="img/clear.svg" alt="Очистить">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__role-selector">
+            <label>
+                <input type="radio" name="role" checked>
+                Я Соискатель
+            </label>
+            <label>
+                <input type="radio" name="role">
+                Я Работодатель
+            </label>
+        </div>
+        <a class="header__settings" href="#">
+            <img src="img/settings.svg" alt="Настройки">
+            <p>Настройки</p>
+        </a>
+        <a class="header__login" href="#">
+            <p>Войти</p>
+            <img src="img/login.svg" alt="Вход">
+        </a>
+    </header>
+    <main>
+        <div class="promo-text">
+            <img src="img/text-only-logo.svg" alt="vsevn.ru">
+            <h1>- просто и быстро найти работу!</h1>
+        </div>
+        <form class="search-form">
+            <div class="search-form__input-wrapper search-wrapper">
+                <input type="search" class="search-form__input search"
+                    placeholder="Ведите название компании или ИНН, или адрес">
+                <img class="search-icon" src="img/search.svg" alt="Поиск">
+                <img class="clear-icon" src="img/clear.svg" alt="Очистить">
+                <ul class="select-options">
+                    <li data-value="cv">123</li>
+                    <li data-value="cv">123</li>
+                    <li data-value="cv">123</li>
+                    <li data-value="cv">123</li>
+                </ul>
+            </div>
+            <div class="search-form__input select" data-value="resume" tabindex="1">
+                <button type="button"></button>
+                <ul class="select-options">
+                    <li data-value="cv">Вакансии</li>
+                    <li data-value="resume">Резюме</li>
+                    <li data-value="company">Компании</li>
+                </ul>
+            </div>
+            <button class="search-form__button"><span>Найти</span></button>
+            <label class="search-form__is-active-checkbox" class="search-form__input">
+                <input type="checkbox">
+                Показать только с активными вакансиями
+            </label>
+        </form>
+        <div class="promo-links">
+            <a href="#">Добавить резюме</a>
+            <a href="#">Подать объявление</a>
+        </div>
+    </main>
+    <script src="js/select.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/region.js"></script>
+    <script src="js/zoom-text-only-lock.js"></script>
+</body>
+
+</html>

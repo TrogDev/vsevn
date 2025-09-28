@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #fff;
+    --text-color: #62560E;
+    --font-size-default: 1.125vw;
+    --font-size-ux: 1.25vw;
+    --font-weight-default: 300;
+    --link-color: #0087FC;
+    --primary-color: #FFDD00;
+    --second-color: #D74134;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+body,
+input,
+select,
+textarea,
+button,
+a,
+input::placeholder {
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+    font-size: var(--font-size-default);
+    font-weight: var(--font-weight-default);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 0.27vw 2.7%;
+    height: 2.60vw;
+}
+
+.region-confirmed .header__region-prefix {
+    display: none;
+}
+
+.header__region {
+    display: flex;
+    align-items: center;
+    gap: 0.26vw;
+    margin-left: 0.885vw;
+}
+
+.region-confirmed .header__region {
+    margin-left: 2vw;
+}
+
+.region-confirmed .header__region span {
+    display: none;
+}
+
+.header__region img {
+    height: 1.302vw;
+    width: 0.956vw;
+}
+
+.header__region-confirmation {
+    color: #FF0303;
+    border: none;
+    padding: 0.63vw 1.13vw 0.66vw 1.2vw;
+    border-radius: 1.04vw;
+    background-color: var(--primary-color);
+    margin-left: 1.146vw;
+    cursor: pointer;
+    line-height: 70%;
+}
+
+.region-confirmed .header__region-confirmation {
+    display: none;
+}
+
+.header__region-edition {
+    margin-left: 0.99vw;
+}
+
+.header__region-edition__btn {
+    display: inline;
+    color: var(--link-color);
+    cursor: pointer;
+    text-underline-offset: 0.260vw;
+    text-decoration: underline;
+    border: none;
+    background: none;
+}
+
+.region-edition-popup-wrapper {
+    position: fixed;
+    display: none;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0005;
+    justify-content: center;
+    align-items: center;
+}
+
+.region-edition-popup-wrapper.active {
+    display: flex;
+}
+
+.region-edition-popup {
+    padding-top: 0.78vw;
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    width: 27.44vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.region-edition-popup__title {
+    font-size: var(--font-size-ux);
+    font-weight: 400;
+    text-align: center;
+}
+
+.region-edition-popup__input-wrapper {
+    margin: 0.78vw 1vw 0 1vw;
+}
+
+.region-edition-popup__input-wrapper .search-icon {
+    right: 0.41vw !important;
+}
+
+.region-edition-popup__input-wrapper .clear-icon {
+    right: 0.41vw !important;
+}
+
+.region-edition-popup__input {
+    width: 100%;
+    height: 2.91vw;
+    padding: 0 0.67vw;
+}
+
+.region-edition-popup__input:focus {
+    outline: none;
+}
+
+.region-edition-popup__input::placeholder {
+    opacity: 0.7;
+}
+
+.region-confirmed .header__region-edition {
+    margin-left: 1.9vw;
+}
+
+.header__role-selector {
+    display: flex;
+    gap: 1.51vw;
+    margin-left: 6.2%;
+}
+
+.region-confirmed .header__role-selector {
+    margin-left: 13%;
+}
+
+.header__role-selector input {
+    display: none;
+}
+
+.header__role-selector label {
+    cursor: pointer;
+}
+
+.header__role-selector label:has(input:checked) {
+    color: var(--link-color);
+}
+
+.header__settings {
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+    margin-left: 16%;
+    text-decoration: none;
+}
+
+.header__settings img {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+.header__login {
+    display: flex;
+    align-items: center;
+    gap: 0.57vw;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.header__login img {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+input[type="search"] {
+    -moz-appearance: textfield;
+}
+
+.select {
+    position: relative;
+    cursor: pointer;
+}
+
+.select::after {
+    content: "";
+    transition: transform .2s ease;
+    background-image: url(../img/select.svg);
+    background-repeat: no-repeat;
+    width: 0.94vw;
+    height: 0.39vw;
+    background-size: contain;
+    position: absolute;
+    right: 1.19vw;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select.active::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.select button {
+    pointer-events: none;
+    font-weight: inherit;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    text-align: inherit;
+    padding-right: 3.28vw;
+}
+
+.select-options {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    background-color: var(--background-color);
+    border: 0.05vw solid;
+    border-color: inherit;
+    font-size: inherit;
+}
+
+.select-options li {
+    padding: 0.93vw 0.57vw 0.78vw 1vw;
+    transition: all .1s ease;
+    font-weight: 300;
+}
+
+.select-options li:hover {
+    background-color: var(--primary-color);
+}
+
+.select.active .select-options {
+    display: flex;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 1.40vw;
+    height: 1.14vw;
+    width: 1.14vw;
+    transform: translateY(-50%);
+}
+
+.search-wrapper:has(input:not(:placeholder-shown)) .search-icon {
+    display: none;
+}
+
+.search-wrapper .clear-icon {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    right: 1vw;
+    height: 1.66vw;
+    width: 1.66vw;
+    transform: translateY(-50%);
+}
+
+.search-wrapper:has(input:placeholder-shown) .clear-icon {
+    display: none;
+}
