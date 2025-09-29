@@ -240,6 +240,10 @@ header {
     text-decoration: none;
 }
 
+.header__settings:hover {
+    filter: invert(20%) sepia(100%) saturate(400%) hue-rotate(180deg);
+}
+
 .header__settings img {
     width: 1.3vw;
     height: 1.3vw;
@@ -251,6 +255,10 @@ header {
     gap: 0.57vw;
     margin-left: auto;
     text-decoration: none;
+}
+
+.header__login:hover {
+    filter: invert(20%) sepia(100%) saturate(400%) hue-rotate(180deg);
 }
 
 .header__login img {
