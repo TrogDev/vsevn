@@ -84,6 +84,11 @@ header {
     line-height: 70%;
 }
 
+.header__region-confirmation:hover {
+    background-color: #FFEA00;
+    color: #ff2525;
+}
+
 .region-confirmed .header__region-confirmation {
     display: none;
 }

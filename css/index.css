@@ -40,6 +40,7 @@ main.employer {
     font-size: var(--font-size-ux);
     letter-spacing: 0.065vw;
     border: 0.025vw solid var(--text-color);
+    padding-bottom: 2px;
 }
 
 .search-form__input::placeholder {
