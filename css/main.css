@@ -307,7 +307,7 @@ input[type="search"] {
     list-style: none;
     flex-direction: column;
     position: absolute;
-    bottom: -2px;
+    bottom: -0.15vw;
     left: 0;
     width: 100%;
     transform: translateY(100%);
