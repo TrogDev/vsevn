@@ -127,7 +127,7 @@ header {
 
 .region-edition-popup {
     padding-top: 0.78vw;
-    padding-bottom: 0.25vw;
+    padding-bottom: 1.55vw;
     background-color: var(--background-color);
     border: 0.05vw solid var(--text-color);
     width: 27.44vw;
