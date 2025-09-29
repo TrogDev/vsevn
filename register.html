@@ -59,23 +59,38 @@
             <div class="register-form__input-group">
                 <div class="register-form__input-wrapper required">
                     <label for="name">Имя</label>
-                    <input type="text" id="name" placeholder="Например, Светлана" required>
+                    <div class="search-wrapper">
+                        <input type="text" id="name" placeholder="Например, Светлана" required>
+                        <img class="clear-icon" src="img/clear.svg" alt="Очистить">
+                    </div>
                 </div>
                 <div class="register-form__input-wrapper required">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="vsevn@example.com" required>
+                    <div class="search-wrapper">
+                        <input type="email" id="email" placeholder="vsevn@example.com" required>
+                        <img class="clear-icon" src="img/clear.svg" alt="Очистить">
+                    </div>
                 </div>
                 <div class="register-form__input-wrapper required">
                     <label for="inn">ИНН вашей компании</label>
-                    <input type="text" id="inn" placeholder="ИНН" required>
+                    <div class="search-wrapper">
+                        <input type="text" id="inn" placeholder="ИНН" required>
+                        <img class="clear-icon" src="img/clear.svg" alt="Очистить">
+                    </div>
                 </div>
                 <div class="register-form__input-wrapper required">
                     <label for="phone">Телефон</label>
-                    <input type="tel" placeholder="Например, 89134567890" id="phone" required>
+                    <div class="search-wrapper">
+                        <input type="tel" placeholder="Например, 89134567890" id="phone" required>
+                        <img class="clear-icon" src="img/clear.svg" alt="Очистить">
+                    </div>
                 </div>
                 <div class="register-form__input-wrapper">
                     <label for="name">Название компании</label>
-                    <input type="text" id="name">
+                    <div class="search-wrapper">
+                        <input type="text" id="name" placeholder="">
+                        <img class="clear-icon" src="img/clear.svg" alt="Очистить">
+                    </div>
                 </div>
             </div>
             <button class="register-form__button">Продолжить</button>
@@ -89,6 +104,7 @@
             </p>
         </form>
     </main>
+    <script src="js/search.js"></script>
     <script src="js/region.js"></script>
     <script src="js/cookie.js"></script>
     <script src="js/zoom-text-only-lock.js"></script>
