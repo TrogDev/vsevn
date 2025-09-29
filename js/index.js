@@ -1,7 +1,7 @@
 const isApplicantBox = document.getElementById("is-applicant");
 const isEmployerBox = document.getElementById("is-employer");
 const searchFormSelect = document.querySelector(".search-form__input.select");
-const promoText = document.querySelector(".promo-text");
+const main = document.querySelector("main");
 const isActiveCheckbox = document.querySelector(".search-form__is-active-checkbox input");
 
 isApplicantBox.addEventListener("change", () => {
@@ -9,8 +9,8 @@ isApplicantBox.addEventListener("change", () => {
         return;
     }
 
-    promoText.classList.remove("employer");
-    promoText.classList.add("applicant");
+    main.classList.remove("employer");
+    main.classList.add("applicant");
     searchFormSelect.dataset.value = "vacancy";
     updateValueDisplay(searchFormSelect);
 });
@@ -20,8 +20,8 @@ isEmployerBox.addEventListener("change", () => {
         return;
     }
 
-    promoText.classList.add("employer");
-    promoText.classList.remove("applicant");
+    main.classList.add("employer");
+    main.classList.remove("applicant");
     searchFormSelect.dataset.value = "resume";
     updateValueDisplay(searchFormSelect);
 });

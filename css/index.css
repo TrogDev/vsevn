@@ -1,5 +1,4 @@
 main {
-    background-image: url(../img/home.png);
     background-size: cover;
     flex: 1 1 auto;
     position: relative;
@@ -8,52 +7,17 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 12.91vw;
+    padding-top: 15.86vw;
     padding-bottom: 1vw;
     overflow: hidden;
 }
 
-main::before {
-    content: "";
-    position: absolute;
-    width: 25.10vw;
-    height: 4.26vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(../img/logo.png);
-    top: 2.60vw;
-    left: 4.63vw;
+main.applicant {
+    background-image: url(../img/applicant-promo.jpg);
 }
 
-.promo-text {
-    display: flex;
-    gap: 1vw;
-    align-items: center;
-    color: var(--primary-color);
-    font-weight: 700;
-    font-size: var(--font-size-ux);
-    letter-spacing: 0.01vw;
-}
-
-.promo-text h1 {
-    font-size: 2em;
-}
-
-.promo-text__applicant-specific,
-.promo-text__employer-specific {
-    display: none;
-}
-
-.promo-text.applicant .promo-text__applicant-specific {
-    display: inline;
-}
-
-.promo-text.employer .promo-text__employer-specific {
-    display: inline;
-}
-
-.promo-text img {
-    height: 1.7vw;
+main.employer {
+    background-image: url(../img/employer-promo.png);
 }
 
 .search-form {
