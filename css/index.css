@@ -205,6 +205,7 @@ main.employer {
     color: #2B2B2B;
     text-decoration: underline;
     text-underline-offset: 0.22vw;
+    text-decoration-thickness: 0.025vw;
 }
 
 .search-form__suggestions li.company .vacancy-number span:hover {
