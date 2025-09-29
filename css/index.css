@@ -207,6 +207,11 @@ main.employer {
     text-underline-offset: 0.22vw;
 }
 
+.search-form__suggestions li.company .vacancy-number span:hover {
+    color: var(--link-color);
+    cursor: pointer;
+}
+
 .promo-links {
     display: flex;
     margin-top: 6.15vw;
