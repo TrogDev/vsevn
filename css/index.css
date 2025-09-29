@@ -113,6 +113,7 @@ main.employer {
 
 .search-form__button {
     cursor: pointer;
+    font-weight: 400;
     background-color: var(--second-color);
     color: var(--background-color);
     border: none;
