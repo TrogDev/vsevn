@@ -123,7 +123,7 @@ header {
     right: 0;
     background-color: #0005;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .region-edition-popup-wrapper.active {
@@ -139,6 +139,7 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
+    top: 7vw;
 }
 
 .region-edition-popup-wrapper__close-btn {
