@@ -127,6 +127,7 @@ header {
 
 .region-edition-popup {
     padding-top: 0.78vw;
+    padding-bottom: 0.25vw;
     background-color: var(--background-color);
     border: 0.05vw solid var(--text-color);
     width: 27.44vw;
@@ -398,6 +399,10 @@ input[type="search"] {
 .cookie-banner a {
     text-decoration: none;
     color: var(--link-color);
+}
+
+.cookie-banner a:hover {
+    color: var(--hover-link-color);
 }
 
 .cookie-banner button {
