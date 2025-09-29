@@ -120,6 +120,7 @@ main.employer {
     border: none;
     border-radius: 0.20vw;
     width: 8.80vw;
+    padding-bottom: 0.1vw;
 }
 
 .search-form__button:hover {
