@@ -15,6 +15,11 @@ if (localStorage.regionConfirmed) {
 const regionEditionPopupBtn = document.querySelector(".header__region-edition__btn");
 const regionEditionPopupWrapper = document.querySelector(".region-edition-popup-wrapper");
 const regionEditionPopup = document.querySelector(".region-edition-popup");
+const closeEditionPopupButton = document.querySelector(".region-edition-popup-wrapper__close-btn");
+
+closeEditionPopupButton.addEventListener("click", () => {
+    regionEditionPopupWrapper.classList.remove("active");
+});
 
 regionEditionPopupBtn.addEventListener("click", () => {
     regionEditionPopupWrapper.classList.add("active");
