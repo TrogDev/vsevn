@@ -136,10 +136,10 @@ header {
     position: relative;
 }
 
-.region-edition-popup::after {
-    content: "";
+.region-edition-popup-wrapper__close-btn {
+    border: none;
+    background: none;
     background-image: url(../img/close.svg);
-    pointer-events: none;
     background-size: cover;
     position: absolute;
     right: -1.14vw;
@@ -147,6 +147,11 @@ header {
     transform: translateX(100%);
     width: 2.03vw;
     height: 2.03vw;
+    cursor: pointer;
+}
+
+.region-edition-popup-wrapper__close-btn:hover {
+    filter: brightness(0) invert(1);
 }
 
 .region-edition-popup__title {
