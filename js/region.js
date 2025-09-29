@@ -63,9 +63,9 @@ const regionEditionInput = document.querySelector(".region-edition-popup__input"
 regionEditionInput.addEventListener("input", () => {
     for (let el of regionEls) {
         if (el.innerText.toLowerCase().includes(regionEditionInput.value.toLowerCase())) {
-            el.style.display = "";
+            el.classList.remove("hidden");
         } else {
-            el.style.display = "none";
+            el.classList.add("hidden");
         }
     }
 });

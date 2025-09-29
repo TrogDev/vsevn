@@ -99,7 +99,8 @@
                 <div class="region-edition-popup">
                     <h2 class="region-edition-popup__title">Выберите регион или город</h2>
                     <div class="region-edition-popup__input-wrapper search-wrapper">
-                        <input class="region-edition-popup__input" type="search" placeholder="Начните вводить название региона, города">
+                        <input class="region-edition-popup__input" type="search"
+                            placeholder="Начните вводить название региона, города">
                         <img class="search-icon" src="img/search.svg" alt="Поиск">
                         <img class="clear-icon" src="img/clear.svg" alt="Очистить">
                     </div>
@@ -109,11 +110,11 @@
         </div>
         <div class="header__role-selector">
             <label>
-                <input type="radio" name="role" checked>
+                <input type="radio" name="role" id="is-applicant" checked>
                 Я Соискатель
             </label>
             <label>
-                <input type="radio" name="role">
+                <input type="radio" name="role" id="is-employer">
                 Я Работодатель
             </label>
         </div>
@@ -127,9 +128,10 @@
         </a>
     </header>
     <main>
-        <div class="promo-text">
+        <div class="promo-text applicant">
             <img src="img/text-only-logo.svg" alt="vsevn.ru">
-            <h1>- просто и быстро найти работу!</h1>
+            <h1>- просто и быстро найти <span class="promo-text__applicant-specific">работу</span><span
+                    class="promo-text__employer-specific">работников</span>!</h1>
         </div>
         <form class="search-form">
             <div class="search-form__input-wrapper search-wrapper">
@@ -137,36 +139,33 @@
                     placeholder="Ведите название компании или ИНН, или адрес">
                 <img class="search-icon" src="img/search.svg" alt="Поиск">
                 <img class="clear-icon" src="img/clear.svg" alt="Очистить">
-                <ul class="select-options">
-                    <li data-value="cv">123</li>
-                    <li data-value="cv">123</li>
-                    <li data-value="cv">123</li>
-                    <li data-value="cv">123</li>
-                </ul>
             </div>
-            <div class="search-form__input select" data-value="resume" tabindex="1">
+            <div class="search-form__input select" data-value="vacancy" tabindex="1">
                 <button type="button"></button>
                 <ul class="select-options">
-                    <li data-value="cv">Вакансии</li>
+                    <li data-value="vacancy">Вакансии</li>
                     <li data-value="resume">Резюме</li>
                     <li data-value="company">Компании</li>
                 </ul>
             </div>
             <button class="search-form__button"><span>Найти</span></button>
-            <label class="search-form__is-active-checkbox" class="search-form__input">
+            <label class="search-form__is-active-checkbox hidden-by-opacity">
                 <input type="checkbox">
                 Показать только с активными вакансиями
             </label>
+            <ul class="search-form__suggestions hidden"></ul>
         </form>
         <div class="promo-links">
             <a href="#">Добавить резюме</a>
-            <a href="#">Подать объявление</a>
+            <a href="register.html">Подать объявление</a>
         </div>
     </main>
     <script src="js/select.js"></script>
     <script src="js/search.js"></script>
     <script src="js/region.js"></script>
+    <script src="js/cookie.js"></script>
     <script src="js/zoom-text-only-lock.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

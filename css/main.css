@@ -13,6 +13,7 @@
     --font-size-ux: 1.25vw;
     --font-weight-default: 300;
     --link-color: #0087FC;
+    --hover-link-color: #0061FC;
     --primary-color: #FFDD00;
     --second-color: #D74134;
 }
@@ -99,6 +100,10 @@ header {
     text-decoration: underline;
     border: none;
     background: none;
+}
+
+.header__region-edition__btn:hover {
+    color: var(--hover-link-color);
 }
 
 .region-edition-popup-wrapper {
@@ -219,6 +224,10 @@ header {
 
 .header__role-selector label:has(input:checked) {
     color: var(--link-color);
+}
+
+.header__role-selector label:has(input:checked):hover {
+    color: var(--hover-link-color);
 }
 
 .header__settings {
@@ -356,4 +365,45 @@ input[type="search"] {
 
 .search-wrapper:has(input:placeholder-shown) .clear-icon {
     display: none;
+}
+
+.cookie-banner {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.26vw 6.35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.cookie-banner a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.cookie-banner button {
+    font-weight: 400;
+    color: var(--background-color);
+    height: 2.60vw;
+    border: none;
+    background-color: var(--link-color);
+    width: 7.65vw;
+    cursor: pointer;
+}
+
+.cookie-banner button:hover {
+    background-color: var(--hover-link-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hidden-by-opacity {
+    opacity: 0 !important;
+    pointer-events: none;
 }

@@ -1,0 +1,106 @@
+main {
+    background-image: url(../img/register.png);
+    background-size: cover;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 2.65vw;
+    padding-right: 6.35vw;
+    background-position: 50% -3vw;
+    background-repeat: no-repeat;
+}
+
+.register-form {
+    width: 36.98vw;
+    padding: 1.8vw 3.48vw 1.7vw 3.48vw;
+    background-color: var(--background-color);
+}
+
+.register-form h1 {
+    font-size: calc(var(--font-size-ux) * 1.5);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0vw;
+    text-indent: -0.35vw;
+    color: #4D4343;
+}
+
+.register-form__input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.55vw;
+    column-gap: 1.875vw;
+    row-gap: 0.95vw;
+}
+
+.register-form__input-wrapper:nth-last-child(1) {
+    grid-column: span 2;
+}
+
+.register-form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.18vw;
+}
+
+.register-form__input-wrapper label {
+    color: #000;
+    margin-left: 0.31vw;
+    position: relative;
+    width: fit-content;
+}
+
+.register-form__input-wrapper.required label::after {
+    content: "*";
+    color: #FF0303;
+    position: absolute;
+    bottom: 0.36vw;
+    right: -0.79vw;
+}
+
+.register-form__input-wrapper input {
+    height: 2.6vw;
+    width: 100%;
+    padding-left: 0.94vw;
+    border: 0.05vw solid #D9D9D9;
+    border-radius: 0.15vw;
+}
+
+.register-form__input-wrapper input::placeholder {
+    color: #86868A;
+}
+
+.register-form__input-wrapper input:focus {
+    outline: none;
+}
+
+.register-form__button {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary-color);
+    width: 12.34vw;
+    height: 2.6vw;
+    margin-top: 2.14vw;
+    display: block;
+    border: none;
+}
+
+.register-form__button:hover {
+    background-color: #FFEA00;
+}
+
+.register-form__info {
+    color: #86868A;
+    font-size: calc(var(--font-size-ux) / 3 * 2);
+    text-align: center;
+    margin-top: 2vw;
+    letter-spacing: 0.01vw;
+}
+
+.register-form__info a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: inherit;
+}
