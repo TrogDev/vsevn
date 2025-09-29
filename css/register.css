@@ -93,7 +93,7 @@ main {
 
 .register-form__info {
     color: #86868A;
-    font-size: calc(var(--font-size-ux) / 3 * 2);
+    font-size: calc(var(--font-size-ux) / 6 * 5);
     text-align: center;
     margin-top: 2vw;
     letter-spacing: 0.01vw;
@@ -103,4 +103,8 @@ main {
     text-decoration: none;
     color: var(--link-color);
     font-size: inherit;
+}
+
+.register-form__info a:hover {
+    color: var(--hover-link-color);
 }
