@@ -28,10 +28,18 @@ isEmployerBox.addEventListener("change", () => {
 
 searchFormSelect.addEventListener("change", () => {
     if (searchFormSelect.dataset.value === "company") {
+        searchInput.placeholder = "Ведите название компании или ИНН, или адрес";
         isActiveCheckbox.parentElement.classList.remove("hidden-by-opacity");
+    } else if (searchFormSelect.dataset.value === "vacancy") {
+        searchInput.placeholder = "Ведите название вакансии";
+        isActiveCheckbox.parentElement.classList.add("hidden-by-opacity");
     } else {
+        searchInput.placeholder = "Ведите название резюме";
         isActiveCheckbox.parentElement.classList.add("hidden-by-opacity");
     }
+    
+    searchInput.value = "";
+    search();
 });
 
 const searchInput = document.querySelector(".search-form__input.search");
@@ -134,7 +142,7 @@ function highlightMatch(text, query) {
     return { matched: false, highlighted: text };
 }
 
-searchInput.addEventListener("input", () => {
+const search = () => {
     suggestions.innerHTML = "";
 
     if (searchInput.value.length < 2) {
@@ -211,4 +219,7 @@ searchInput.addEventListener("input", () => {
     } else {
         suggestions.classList.add("hidden");
     }
-});
+};
+
+searchInput.addEventListener("input", search);
+

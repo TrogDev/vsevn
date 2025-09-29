@@ -317,6 +317,7 @@ input[type="search"] {
     border: 0.05vw solid;
     border-color: inherit;
     font-size: inherit;
+    z-index: 1;
 }
 
 .select-options li {
