@@ -1,5 +1,7 @@
 for (let el of document.querySelectorAll(".search-wrapper .clear-icon")) {
     el.addEventListener("click", () => {
-        el.parentElement.querySelector("input").value = "";
+        const input = el.parentElement.querySelector("input");
+        input.value = "";
+        input.dispatchEvent(new Event("input", { bubbles: true }));
     });
 }
