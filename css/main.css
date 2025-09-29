@@ -293,8 +293,8 @@ input[type="search"] {
     transition: transform .2s ease;
     background-image: url(../img/select.svg);
     background-repeat: no-repeat;
-    width: 0.94vw;
-    height: 0.39vw;
+    width: 1vw;
+    height: 0.5vw;
     background-size: contain;
     position: absolute;
     right: 1.19vw;
