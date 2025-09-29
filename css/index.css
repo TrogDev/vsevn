@@ -80,6 +80,10 @@ main.employer {
     user-select: none;
 }
 
+.search-form__is-active-checkbox:has(input:checked) {
+    color: var(--link-color);
+}
+
 .search-form__is-active-checkbox::before {
     content: "";
     height: 1.19vw;
