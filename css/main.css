@@ -326,6 +326,10 @@ input[type="search"] {
     font-weight: 300;
 }
 
+.select-options li.active {
+    background-color: #ffec86;
+}
+
 .select-options li:hover {
     background-color: var(--primary-color);
 }

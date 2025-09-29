@@ -1,6 +1,15 @@
 const updateValueDisplay = (el) => {
     const value = el.dataset.value;
-    el.querySelector("button").innerText = el.querySelector(`li[data-value="${value}"]`).innerText;
+
+    for (let option of el.querySelectorAll("li")) {
+        if (option.dataset.value === value) {
+            el.querySelector("button").innerText = option.innerText;
+            option.classList.add("active");
+        } else {
+            option.classList.remove("active");
+        }
+    }
+
     el.dispatchEvent(new Event("change", { bubbles: true }));
 }
 
